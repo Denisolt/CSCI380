@@ -11,3 +11,4 @@
 | Denisolt     | Shakhbulatov | dshakhbu@nyit.edu |Backend/helping|
 | Yichang      | Shao         | yshao05@nyit.edu  |Backend|
 
+## Regular Meeting time: every Friday after class (3:45-4:45)
