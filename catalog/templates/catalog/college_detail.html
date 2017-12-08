@@ -1,0 +1,29 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+<h1>College: {{ college.name }} </h1>
+<a href="{% url 'college_update' college.pk %}">Edit College info</a> </br>
+<a href="{% url 'college_delete' college.pk %}">Delete College</a>
+
+<div style="margin-left:5px;margin-top:20px">
+
+{% if college.school %}
+<h2>Schools:</h2>
+{% endif%}
+<dl>
+
+<h2> Schools at {{ college.name }}: </h2>
+
+<a href="school/create">add new school</a>
+
+{% for school in college.school_set.all %}
+<ul>
+    <li><a href="{% url 'school-detail' school.pk %}">{{ school }}</a></li>
+  </ul>
+{% endfor %}
+</dl>
+
+</div>
+{% endblock %}

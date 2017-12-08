@@ -1,0 +1,36 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+<h1>Exam: {{ exam.name }} </h1>
+<h2>Date: {{ exam.ExamDate }} </br>
+	Instructor: {{ exam.InstrucorName }} / {{ exam.InstructorsEmail }} </br>
+	Semester: {{ exam.semester }} {{ exam.Year }} </br>
+	Course: {{ exam.Course }} </h2>
+<a href="{% url 'exam_update' exam.pk %}">Edit the exam info</a> </br>
+<a href="{% url 'exam_delete' exam.pk %}">Delete the exam</a>
+
+<div style="margin-left:5px;margin-top:20px">
+
+<h2>Questions Types:</h2>
+
+
+<ul>
+    <li><a href="{% url 'MCQ-list' %}">Multuple Choice Question</a></li>
+    <li><a href="{% url 'MAQ-list' %}">Multuple Answer Question</a></li>
+    <li><a href="{% url 'TFQ-list' %}">True or False Question</a></li>
+    <li><a href="{% url 'ESSQ-list' %}">Essay Question</a></li>
+    <li><a href="{% url 'ORDQ-list' %}">Order Question</a></li>
+    <li><a href="{% url 'MATQ-list' %}">Match Question</a></li>
+    <li><a href="{% url 'NUMQ-list' %}">Numeric Reponse Question</a></li>
+    <li><a href="{% url 'SRQ-list' %}">Short Reponse Question</a></li>
+    <li><a href="{% url 'FIBQ-list' %}">Fill in blank Question</a></li>
+
+  </ul>
+</dl>
+</dl>
+</dl>
+
+</div>
+{% endblock %}

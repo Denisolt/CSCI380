@@ -1,0 +1,25 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+<h1>Essay Question List</h1>
+
+{% if ess_question_list %}
+  <ul>
+
+  {% for question in ess_question_list %}
+    <li>
+      <a href="{% url 'ESSQ-detail' question.pk %}">
+      {{ question.question }}
+      </a>
+    </li>
+  {% endfor %}
+
+ </ul>
+{% endif %}
+
+<a href="create">Add new Essay Question </a>
+        
+        
+{% endblock %}
