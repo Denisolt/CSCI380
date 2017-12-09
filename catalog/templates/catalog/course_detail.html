@@ -1,0 +1,29 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+<h1>Course: {{ course.name }} </h1>
+<a href="{% url 'course_update' course.pk %}">Edit course info</a> </br>
+<a href="{% url 'course_delete' course.pk %}">Delete course</a>
+
+<div style="margin-left:5px;margin-top:20px">
+
+{% if school.course %}
+<h2>Course:</h2>
+{% endif%}
+<dl>
+
+<h2> Exams at {{ exam.name }}: </h2>
+
+<a href="{% url 'exam_create' %}">add new exam</a>
+
+{% for c in course.exam_set.all %}
+<ul>
+    <li><a href="{% url 'exam-detail' c.pk%}">{{ c }}</a></li>
+  </ul>
+{% endfor %}
+</dl>
+
+</div>
+{% endblock %}
