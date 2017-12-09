@@ -17,22 +17,111 @@
         </div>
 </div>
 
-<div style="margin-left:5px;margin-top:20px">
 
-<h2>Questions Types:</h2>
+<div class="row">
+        <div class="jumbotron">
 
+    <h2>Questions:</h2>
 <ul>
-    <li><a href="{% url 'MCQ-list' %}">Multuple Choice Question</a></li>
-    <li><a href="{% url 'MAQ-list' %}">Multuple Answer Question</a></li>
-    <li><a href="{% url 'TFQ-list' %}">True or False Question</a></li>
-    <li><a href="{% url 'ESSQ-list' %}">Essay Question</a></li>
-    <li><a href="{% url 'ORDQ-list' %}">Order Question</a></li>
-    <li><a href="{% url 'MATQ-list' %}">Match Question</a></li>
-    <li><a href="{% url 'NUMQ-list' %}">Numeric Reponse Question</a></li>
-    <li><a href="{% url 'SRQ-list' %}">Short Reponse Question</a></li>
-    <li><a href="{% url 'FIBQ-list' %}">Fill in blank Question</a></li>
+    <h3>{{exam.mc_question_set.all|length}} Multuple Choice Questions: </h3>
+    {% for question in exam.mc_question_set.all %}
+
+    <li style="margin-left:45px;" >
+      <a href="{% url 'MCQ-detail' question.pk %}">{{ question }}</a>
+    </li>
+    {% endfor %}
+        <a href="/catalog/college/school/department/course/exam/MCQ/create"><button type="button" class="btn btn-default btn-primary">add a question</button></a>     
+    <h3>{{exam.ma_question_set.all|length}} Multuple Answer Questions: </h3>
+     {% for question in exam.ma_question_set.all %}
+
+    <li style="margin-left:45px;" >
+      <a>{{ question }}</a>
+    </li>
+    {% endfor %}
+        <a href="/catalog/college/school/department/course/exam/MCA/create"><button type="button" class="btn btn-default btn-primary">add a question</button></a>     
+
+  </br>
+    <h3>{{exam.tf_question_set.all|length}} True or False Questions: </h3>
+     {% for question in exam.tf_question_set.all %}
+
+    <li style="margin-left:45px;" >
+      <a>{{ question }}</a>
+    </li>
+    {% endfor %}
+      <a href="/catalog/college/school/department/course/exam/TFQ/create"><button type="button" class="btn btn-default btn-primary">add a question</button></a>     
+
+  </br>
+    <h3>{{exam.ess_question_set.all|length}} Essay Questions: </h3>
+     {% for question in exam.ess_question_set.all %}
+
+    <li style="margin-left:45px;" >
+      <a>{{ question }}</a>
+    </li>
+    {% endfor %}
+    <a href="/catalog/college/school/department/course/exam/ESSQ/create"><button type="button" class="btn btn-default btn-primary">add a question</button></a>     
+
+  </br>
+    <h3>{{exam.ord_question_set.all|length}} Ordering Questions: </h3>
+     {% for question in exam.ord_question_set.all %}
+
+    <li style="margin-left:45px;" >
+      <a>{{ question }}</a>
+    </li>
+    {% endfor %}
+    <a href="/catalog/college/school/department/course/exam/ORDQ/create"><button type="button" class="btn btn-default btn-primary">add a question</button></a>     
+  </br>
+
+    <h3>{{exam.mat_question_set.all|length}} Match Questions: </h3>
+     {% for question in exam.mat_question_set.all %}
+
+    <li style="margin-left:45px;" >
+      <a>{{ question }}</a>
+    </li>
+    {% endfor %}
+        <a href="/catalog/college/school/department/course/exam/MATQ/create"><button type="button" class="btn btn-default btn-primary">add a question</button></a>     
+
+  </br>
+    <h3>{{exam.num_question_set.all|length}} Numeric Questions: </h3>
+     {% for question in exam.num_question_set.all %}
+
+    <li style="margin-left:45px;" >
+      <a>{{ question }}</a>
+    </li>
+    {% endfor %}
+            <a href="/catalog/college/school/department/course/exam/NUMQ/create"><button type="button" class="btn btn-default btn-primary">add a question</button></a>     
+
+  </br>
+    <h3>{{exam.sr_question_set.all|length}} Short Response Questions: </h3>
+     {% for question in exam.sr_question_set.all %}
+
+    <li style="margin-left:45px;" >
+      <a>{{ question }}</a>
+    </li>
+    {% endfor %}
+        <a href="/catalog/college/school/department/course/exam/SRQ/create"><button type="button" class="btn btn-default btn-primary">add a question</button></a>     
+  </br>
+    <h3>{{exam.fib_question_set.all|length}} Multiple Fill in the Blank Questions: </h3>
+     {% for question in exam.fib_question_set.all %}
+
+    <li style="margin-left:45px;" >
+      <a>{{ question }}</a>
+    </li>
+    {% endfor %}
+    <a href="/catalog/college/school/department/course/exam/FIBQ/create"><button type="button" class="btn btn-default btn-primary">add a question</button></a>     
+  </br>
+    <h3>{{exam.fib_question_set.all|length}} Single Fill in the Blank Questions: </h3>
+     {% for question in exam.fib_question_set.all %}
+
+    <li style="margin-left:45px;" >
+      <a>{{ question }}</a>
+    </li>
+    {% endfor %}
+        <a href="/catalog/college/school/department/course/exam/FIBQ/create"><button type="button" class="btn btn-default btn-primary">add a question</button></a>     
+
 
   </ul>
+</div>
+</div>
 </dl>
 </dl>
 </dl>
