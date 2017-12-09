@@ -4,11 +4,12 @@
 
 <h1>Delete the Course</h1>
 
-<p>Are you sure you want to delete the course: {{ course }}?</p>
+<p>Are you sure you want to delete the course: <b>{{ course }}</b> ?</p>
 
 <form action="" method="POST">
   {% csrf_token %}
-  <input type="submit" action="" value="Yes, delete." />
+  <button class="button btn-default btn-danger" type="submit" action="" value="Yes, delete.">Yes, delete</button>
+  <button class="button btn-default">No, have mercy</button>
 </form>
 
 {% endblock %}
