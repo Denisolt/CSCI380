@@ -81,10 +81,15 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ddsbpml8ceclh4',
+        'USER': 'jsottvjzfrqspr',
+        'PASSWORD': 'bb7af5ba86cd345534eb061689ecc78bf58261b29f7c17ef02d0b07265076aa8',
+        'HOST': 'ec2-23-21-101-249.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation

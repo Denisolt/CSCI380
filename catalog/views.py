@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
-from .models import College, School, Department, Course, Exam, MC_Question, MA_Question, TF_Question, ORD_Question, ESS_Question, MAT_Question, NUM_Question, SR_Question, FIB_PLUS_Question, QuestionTypes
+from .models import College, School, Department, Course, Exam, MC_Question, MA_Question, TF_Question, ORD_Question, ESS_Question, MAT_Question, NUM_Question, SR_Question, FIB_PLUS_Question
 from django.views import generic
 from django.contrib.auth.mixins import PermissionRequiredMixin
 
@@ -108,12 +108,11 @@ class CourseDetailView(generic.DetailView):
 class ExamCreate(PermissionRequiredMixin, CreateView):
     model = Exam
     fields = '__all__'
-    initial={'name': 'Midterm'}
     permission_required = 'catalog.can_mark_returned'
 
 class ExamUpdate(PermissionRequiredMixin, UpdateView):
     model = Exam
-    fields = ['name', 'ExamDate', 'InstrucorName', 'InstructorsEmail', 'semester', 'Year']
+    fields = '__all__'
     permission_required = 'catalog.can_mark_returned'
 
 class ExamDelete(PermissionRequiredMixin, DeleteView):
@@ -123,9 +122,6 @@ class ExamDelete(PermissionRequiredMixin, DeleteView):
 
 class ExamDetailView(generic.DetailView):
     model = Exam
-
-
-
 
 #--------------------------------------------------------#
 
@@ -195,7 +191,7 @@ class MCQCreate(PermissionRequiredMixin, CreateView):
 
 class MCQUpdate(PermissionRequiredMixin, UpdateView):
     model = MC_Question
-    fields = ['question']
+    fields = '__all__'
     permission_required = 'catalog.can_mark_returned'
     success_url = reverse_lazy('college')
 

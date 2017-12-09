@@ -16,7 +16,7 @@
 {% for department in school.department_set.all %}
 <ul>
     <li><a href="{% url 'department-detail' department.pk %}">{{ department }}</a></li>
-  </ul>
+</ul>
 {% endfor %}
 </dl>
 
