@@ -1,0 +1,97 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+<h1>{{ mc_question.question }}</h1>
+
+<a href="{% url 'MC_update' mc_question.pk %}">Edit the question</a> </br>
+<a href="{% url 'MC_delete' mc_question.pk %}">Delete the question</a>
+
+</br></br>
+<h4>Possible answers:</h4>
+<ul>
+
+	{% if mc_question.answer1 != 'null' %}
+		<li>{{ mc_question.answer1 }}  -  {{ mc_question.correctness1 }}</li>
+	{% endif%}
+	{% if mc_question.answer2 != 'null' %}
+		<li>{{ mc_question.answer2 }}  -  {{ mc_question.correctness2 }}</li>
+	{% endif%}
+	{% if mc_question.answer3 != 'null' %}
+		<li>{{ mc_question.answer3 }}  -  {{ mc_question.correctness3 }}</li>
+	{% endif%}
+	{% if mc_question.answer4 != 'null' %}
+		<li>{{ mc_question.answer4 }}  -  {{ mc_question.correctness4 }}</li>
+	{% endif%}
+    {% if mc_question.answer5 != 'null' %}
+		<li>{{ mc_question.answer5 }}  -  {{ mc_question.correctness5 }}</li>
+	{% endif%}
+
+    {% if mc_question.answer6 != 'null' %}
+		<li>{{ mc_question.answer6 }}  -  {{ mc_question.correctness6 }}</li>
+	{% endif%}
+
+    {% if mc_question.answer7 != 'null' %}
+		<li>{{ mc_question.answer7 }}  -  {{ mc_question.correctness7 }}</li>
+	{% endif%}
+
+    {% if mc_question.answer8 != 'null' %}
+		<li>{{ mc_question.answer8 }}  -  {{ mc_question.correctness8 }}</li>
+	{% endif%}
+
+    {% if mc_question.answer9 != 'null' %}
+		<li>{{ mc_question.answer9 }}  -  {{ mc_question.correctness9 }}</li>
+	{% endif%}
+
+    {% if mc_question.answer10 != 'null' %}
+		<li>{{ mc_question.answer10 }}  -  {{ mc_question.correctness10 }}</li>
+	{% endif%}
+
+    {% if mc_question.answer11 != 'null' %}
+		<li>{{ mc_question.answer11 }}  -  {{ mc_question.correctness11 }}</li>
+	{% endif%}
+
+    {% if mc_question.answer12 != 'null' %}
+		<li>{{ mc_question.answer12 }}  -  {{ mc_question.correctness12 }}</li>
+	{% endif%}
+
+    {% if mc_question.answer13 != 'null' %}
+		<li>{{ mc_question.answer13 }}  -  {{ mc_question.correctness13 }}</li>
+	{% endif%}
+
+    {% if mc_question.answer14 != 'null' %}
+		<li>{{ mc_question.answer14 }}  -  {{ mc_question.correctness14 }}</li>
+	{% endif%}
+
+    {% if mc_question.answer15 != 'null' %}
+		<li>{{ mc_question.answer15 }}  -  {{ mc_question.correctness15 }}</li>
+	{% endif%}
+
+    {% if mc_question.answer16 != 'null' %}
+		<li>{{ mc_question.answer16 }}  -  {{ mc_question.correctness16 }}</li>
+	{% endif%}
+
+    {% if mc_question.answer17 != 'null' %}
+		<li>{{ mc_question.answer17 }}  -  {{ mc_question.correctness17 }}</li>
+	{% endif%}
+
+    {% if mc_question.answer18 != 'null' %}
+		<li>{{ mc_question.answer18 }}  -  {{ mc_question.correctness18 }}</li>
+	{% endif%}
+
+    {% if mc_question.answer19 != 'null' %}
+		<li>{{ mc_question.answer19 }}  -  {{ mc_question.correctness19 }}</li>
+	{% endif%}
+
+    {% if mc_question.answer20 != 'null' %}
+		<li>{{ mc_question.answer20 }}  -  {{ mc_question.correctness20 }}</li>
+	{% endif%}
+
+  </ul>
+
+ </ul>
+
+        
+        
+{% endblock %}
