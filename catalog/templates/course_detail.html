@@ -1,0 +1,39 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+
+<div class="row">
+	<div class="col-md-12">
+		<div align="center"><img src="{% static 'images/examinator.png' %}" width="150" /></div>
+		<div class="progress">
+		  <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+		    <span class="sr-only">100% Complete</span>
+		</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+		
+	<div class="jumbotron col-md-12">
+		<div class="col-md-8"><h2>{{ course.name }} Exams:</h2></div>
+		<div class="col-md-4" align="right">
+			<small><a href="{% url 'course_update' course.pk %}">Edit Course</a> or <a href="{% url 'course_delete' course.pk %}">Delete Course</a></small><br/>
+		</div>
+
+		<div class="col-md-12">
+		{% for c in course.exam_set.all %}
+<ul>
+    <li><a href="{% url 'exam-detail' c.pk%}">{{ c }}</a></li>
+  </ul>
+{% endfor %}
+<a href="{% url 'exam_create' %}"><button type="button" class="btn btn-default btn-primary">
+		    Create New Exam
+		  </button></a>
+		<br />
+		
+	</div>
+
+</div>
+
+{% endblock %}

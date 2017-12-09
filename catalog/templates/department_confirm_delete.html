@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>Delete Department</h1>
+
+<p>Are you sure you want to delete the department <b>{{ department }}</b> ?</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <button class="button btn-default btn-danger" type="submit" action="" value="Yes, delete.">Yes, delete</button>
+  <button class="button btn-default">No, have mercy</button>
+</form>
+
+{% endblock %}

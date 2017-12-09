@@ -1,0 +1,25 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+<h1>Order Question List</h1>
+
+{% if ord_question_list %}
+  <ul>
+
+  {% for question in ord_question_list %}
+    <li>
+      <a href="{% url 'ORDQ-detail' question.pk %}">
+      {{ question.question }}
+      </a>
+    </li>
+  {% endfor %}
+
+ </ul>
+{% endif %}
+
+<a href="create">Add new Order Question </a>
+        
+        
+{% endblock %}
