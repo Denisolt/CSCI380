@@ -1,5 +1,7 @@
 {% extends "base_generic.html" %}
 {% block content %}
+<div class="row">
+		<div class="jumbotron">
 
 <form action="" method="post">
     {% csrf_token %}
@@ -7,6 +9,8 @@
     {{ form.as_table }}
     </table>
     <input type="submit" value="Submit" />
-    
+
 </form>
+</div>
+</div>
 {% endblock %}
