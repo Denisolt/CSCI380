@@ -1,0 +1,138 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="row">
+        <div class="jumbotron">
+<h1>Matching Question</h1>
+
+<a href="{% url 'MAT_update' mat_question.pk %}"><button type="button" class="btn btn-default">Edit Question</button></a>
+<a href="{% url 'MAT_delete' mat_question.pk %}"><button type="button" class="btn btn-default btn-primary">Delete Question</button></br></br>
+
+
+<h2>Question: {{ mat_question.question }}</h2>
+
+<h2>Answers:</h2>
+    {% if mat_question.A != 'null' %}
+    <li>
+      </a>{{mat_question.A}} | {{mat_question.answer1}}
+    </li>
+    {%endif%}
+
+    {% if mat_question.B != 'null' %}
+    <li>
+      </a>{{mat_question.B}} | {{mat_question.answer2}}
+    </li>
+    {%endif%}
+
+    {% if mat_question.C != 'null' %}
+    <li>
+      </a>{{mat_question.C}} | {{mat_question.answer3}}
+    </li>
+    {%endif%}
+
+    {% if mat_question.D != 'null' %}
+    <li>
+      </a>{{mat_question.D}} | {{mat_question.answer4}}
+    </li>
+    {%endif%}
+
+    {% if mat_question.E != 'null' %}
+    <li>
+      </a>{{mat_question.E}} | {{mat_question.answer5}}
+    </li>
+    {%endif%}
+
+    {% if mat_question.F != 'null' %}
+    <li>
+      </a>{{mat_question.F}} | {{mat_question.answer6}}
+    </li>
+    {%endif%}
+
+    {% if mat_question.G != 'null' %}
+    <li>
+      </a>{{mat_question.G}} | {{mat_question.answer7}}
+    </li>
+    {%endif%}
+
+    {% if mat_question.H != 'null' %}
+    <li>
+      </a>{{mat_question.H}} | {{mat_question.answer8}}
+    </li>
+    {%endif%}
+
+    {% if mat_question.I != 'null' %}
+    <li>
+      </a>{{mat_question.I}} | {{mat_question.answer9}}
+    </li>
+    {%endif%}
+
+    {% if mat_question.J != 'null' %}
+    <li>
+      </a>{{mat_question.J}} | {{mat_question.answer10}}
+    </li>
+    {%endif%}
+
+    {% if mat_question.K != 'null' %}
+    <li>
+      </a>{{mat_question.K}} | {{mat_question.answer11}}
+    </li>
+    {%endif%}
+
+    {% if mat_question.L != 'null' %}
+    <li>
+      </a>{{mat_question.L}} | {{mat_question.answer12}}
+    </li>
+    {%endif%}
+
+    {% if mat_question.M != 'null' %}
+    <li>
+      </a>{{mat_question.M}} | {{mat_question.answer13}}
+    </li>
+    {%endif%}
+
+    {% if mat_question.N != 'null' %}
+    <li>
+      </a>{{mat_question.N}} | {{mat_question.answer14}}
+    </li>
+    {%endif%}
+
+    {% if mat_question.O != 'null' %}
+    <li>
+      </a>{{mat_question.O}} | {{mat_question.answer15}}
+    </li>
+    {%endif%}
+
+    {% if mat_question.P != 'null' %}
+    <li>
+      </a>{{mat_question.P}} | {{mat_question.answer16}}
+    </li>
+    {%endif%}
+
+    {% if mat_question.Q != 'null' %}
+    <li>
+      </a>{{mat_question.Q}} | {{mat_question.answer17}}
+    </li>
+    {%endif%}
+
+    {% if mat_question.R != 'null' %}
+    <li>
+      </a>{{mat_question.R}} | {{mat_question.answer18}}
+    </li>
+    {%endif%}
+
+    {% if mat_question.S != 'null' %}
+    <li>
+      </a>{{mat_question.S}} | {{mat_question.answer19}}
+    </li>
+    {%endif%}
+
+    {% if mat_question.T != 'null' %}
+    <li>
+      </a>{{mat_question.P}} | {{mat_question.answer20}}
+    </li>
+    {%endif%}
+ </ul>
+
+        
+        </div></div>
+{% endblock %}

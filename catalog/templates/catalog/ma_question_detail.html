@@ -1,0 +1,138 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="row">
+        <div class="jumbotron">
+<h1>Multiple Answer Question</h1>
+
+<a href="{% url 'MA_update' ma_question.pk %}"><button type="button" class="btn btn-default">Edit Question</button></a>
+<a href="{% url 'MA_delete' ma_question.pk %}"><button type="button" class="btn btn-default btn-primary">Delete Question</button></br></br>
+
+
+<h2>Question: {{ ma_question.question }}</h2>
+
+<h2>Answers:</h2>
+    {% if ma_question.A != 'null' %}
+    <li>
+      </a>{{ma_question.A}} | {{ma_question.correctness1}}
+    </li>
+    {%endif%}
+
+    {% if ma_question.B != 'null' %}
+    <li>
+      </a>{{ma_question.B}} | {{ma_question.correctness2}}
+    </li>
+    {%endif%}
+
+    {% if ma_question.C != 'null' %}
+    <li>
+      </a>{{ma_question.C}} | {{ma_question.correctness3}}
+    </li>
+    {%endif%}
+
+    {% if ma_question.D != 'null' %}
+    <li>
+      </a>{{ma_question.D}} | {{ma_question.correctness4}}
+    </li>
+    {%endif%}
+
+    {% if ma_question.E != 'null' %}
+    <li>
+      </a>{{ma_question.E}} | {{ma_question.correctness5}}
+    </li>
+    {%endif%}
+
+    {% if ma_question.F != 'null' %}
+    <li>
+      </a>{{ma_question.F}} | {{ma_question.correctness6}}
+    </li>
+    {%endif%}
+
+    {% if ma_question.G != 'null' %}
+    <li>
+      </a>{{ma_question.G}} | {{ma_question.correctness7}}
+    </li>
+    {%endif%}
+
+    {% if ma_question.H != 'null' %}
+    <li>
+      </a>{{ma_question.H}} | {{ma_question.correctness8}}
+    </li>
+    {%endif%}
+
+    {% if ma_question.I != 'null' %}
+    <li>
+      </a>{{ma_question.I}} | {{ma_question.correctness9}}
+    </li>
+    {%endif%}
+
+    {% if ma_question.J != 'null' %}
+    <li>
+      </a>{{ma_question.J}} | {{ma_question.correctness10}}
+    </li>
+    {%endif%}
+
+    {% if ma_question.K != 'null' %}
+    <li>
+      </a>{{ma_question.K}} | {{ma_question.correctness11}}
+    </li>
+    {%endif%}
+
+    {% if ma_question.L != 'null' %}
+    <li>
+      </a>{{ma_question.L}} | {{ma_question.correctness12}}
+    </li>
+    {%endif%}
+
+    {% if ma_question.M != 'null' %}
+    <li>
+      </a>{{ma_question.M}} | {{ma_question.correctness13}}
+    </li>
+    {%endif%}
+
+    {% if ma_question.N != 'null' %}
+    <li>
+      </a>{{ma_question.N}} | {{ma_question.correctness14}}
+    </li>
+    {%endif%}
+
+    {% if ma_question.O != 'null' %}
+    <li>
+      </a>{{ma_question.O}} | {{ma_question.correctness15}}
+    </li>
+    {%endif%}
+
+    {% if ma_question.P != 'null' %}
+    <li>
+      </a>{{ma_question.P}} | {{ma_question.correctness16}}
+    </li>
+    {%endif%}
+
+    {% if ma_question.Q != 'null' %}
+    <li>
+      </a>{{ma_question.Q}} | {{ma_question.correctness17}}
+    </li>
+    {%endif%}
+
+    {% if ma_question.R != 'null' %}
+    <li>
+      </a>{{ma_question.R}} | {{ma_question.correctness18}}
+    </li>
+    {%endif%}
+
+    {% if ma_question.S != 'null' %}
+    <li>
+      </a>{{ma_question.S}} | {{ma_question.correctness19}}
+    </li>
+    {%endif%}
+
+    {% if ma_question.T != 'null' %}
+    <li>
+      </a>{{ma_question.P}} | {{ma_question.correctness20}}
+    </li>
+    {%endif%}
+ </ul>
+
+        
+        </div></div>
+{% endblock %}

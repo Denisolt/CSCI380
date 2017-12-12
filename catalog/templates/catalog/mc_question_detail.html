@@ -1,17 +1,140 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
+<div class="row">
+		<div class="jumbotron">
+
+<h1>Multiple Choice Question</h1>
 
 
-<h1>{{ mc_question.question }}</h1>
+<a href="{% url 'MC_update' mc_question.pk %}"><button type="button" class="btn btn-default">Edit Question</button></a>
+<a href="{% url 'MC_delete' mc_question.pk %}"><button type="button" class="btn btn-default btn-primary">Delete Question</button></br></br>
 
+
+<h2>Question: {{ mc_question.question }}</h2>
+
+
+<h2>Answers:</h2>
+    {% if mc_question.A != 'null' %}
     <li>
-      </a>
+      </a>{{mc_question.A}} | {{mc_question.correctness1}}
     </li>
+    {%endif%}
 
+    {% if mc_question.B != 'null' %}
+    <li>
+      </a>{{mc_question.B}} | {{mc_question.correctness2}}
+    </li>
+    {%endif%}
+
+    {% if mc_question.C != 'null' %}
+    <li>
+      </a>{{mc_question.C}} | {{mc_question.correctness3}}
+    </li>
+    {%endif%}
+
+    {% if mc_question.D != 'null' %}
+    <li>
+      </a>{{mc_question.D}} | {{mc_question.correctness4}}
+    </li>
+    {%endif%}
+
+    {% if mc_question.E != 'null' %}
+    <li>
+      </a>{{mc_question.E}} | {{mc_question.correctness5}}
+    </li>
+    {%endif%}
+
+    {% if mc_question.F != 'null' %}
+    <li>
+      </a>{{mc_question.F}} | {{mc_question.correctness6}}
+    </li>
+    {%endif%}
+
+    {% if mc_question.G != 'null' %}
+    <li>
+      </a>{{mc_question.G}} | {{mc_question.correctness7}}
+    </li>
+    {%endif%}
+
+    {% if mc_question.H != 'null' %}
+    <li>
+      </a>{{mc_question.H}} | {{mc_question.correctness8}}
+    </li>
+    {%endif%}
+
+    {% if mc_question.I != 'null' %}
+    <li>
+      </a>{{mc_question.I}} | {{mc_question.correctness9}}
+    </li>
+    {%endif%}
+
+    {% if mc_question.J != 'null' %}
+    <li>
+      </a>{{mc_question.J}} | {{mc_question.correctness10}}
+    </li>
+    {%endif%}
+
+    {% if mc_question.K != 'null' %}
+    <li>
+      </a>{{mc_question.K}} | {{mc_question.correctness11}}
+    </li>
+    {%endif%}
+
+    {% if mc_question.L != 'null' %}
+    <li>
+      </a>{{mc_question.L}} | {{mc_question.correctness12}}
+    </li>
+    {%endif%}
+
+    {% if mc_question.M != 'null' %}
+    <li>
+      </a>{{mc_question.M}} | {{mc_question.correctness13}}
+    </li>
+    {%endif%}
+
+    {% if mc_question.N != 'null' %}
+    <li>
+      </a>{{mc_question.N}} | {{mc_question.correctness14}}
+    </li>
+    {%endif%}
+
+    {% if mc_question.O != 'null' %}
+    <li>
+      </a>{{mc_question.O}} | {{mc_question.correctness15}}
+    </li>
+    {%endif%}
+
+    {% if mc_question.P != 'null' %}
+    <li>
+      </a>{{mc_question.P}} | {{mc_question.correctness16}}
+    </li>
+    {%endif%}
+
+    {% if mc_question.Q != 'null' %}
+    <li>
+      </a>{{mc_question.Q}} | {{mc_question.correctness17}}
+    </li>
+    {%endif%}
+
+    {% if mc_question.R != 'null' %}
+    <li>
+      </a>{{mc_question.R}} | {{mc_question.correctness18}}
+    </li>
+    {%endif%}
+
+    {% if mc_question.S != 'null' %}
+    <li>
+      </a>{{mc_question.S}} | {{mc_question.correctness19}}
+    </li>
+    {%endif%}
+
+    {% if mc_question.T != 'null' %}
+    <li>
+      </a>{{mc_question.P}} | {{mc_question.correctness20}}
+    </li>
+    {%endif%}
  </ul>
-
-<a href="create">Add new Multuple Choice Question </a>
         
-        
+        </div></div>
 {% endblock %}

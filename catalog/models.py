@@ -162,9 +162,6 @@ class MC_Question(models.Model):
         return self.question
 
     def get_absolute_url(self):
-        """
-        Returns the url to access a particular book instance.
-        """
         return reverse('MCQ-detail', args=[str(self.id)])
 
 
@@ -244,9 +241,6 @@ class MA_Question(models.Model):
         return self.question
 
     def get_absolute_url(self):
-        """
-        Returns the url to access a particular book instance.
-        """
         return reverse('MAQ-detail', args=[str(self.id)])
 
 class TF_Question(models.Model):
@@ -258,10 +252,13 @@ class TF_Question(models.Model):
          ('False', 'False'),
     )
 
-    answers= models.CharField(max_length=5, choices=TF_Question_Option, blank=True, default='null', help_text='Semester')
+    answers= models.CharField(max_length=5, choices=TF_Question_Option, blank=True, default='null')
 
     def __str__(self):
         return self.question
+
+    def get_absolute_url(self):
+        return reverse('TFQ-detail', args=[str(self.id)])
 
 class ESS_Question(models.Model):
     exam = models.ForeignKey(Exam)
@@ -271,6 +268,8 @@ class ESS_Question(models.Model):
 
     def __str__(self):
         return self.question
+    def get_absolute_url(self):
+        return reverse('ESSQ-detail', args=[str(self.id)])
 
 class ORD_Question(models.Model):
     exam = models.ForeignKey(Exam)
@@ -299,6 +298,8 @@ class ORD_Question(models.Model):
 
     def __str__(self):
         return self.question
+    def get_absolute_url(self):
+        return reverse('ORDQ-detail', args=[str(self.id)])
 
 class MAT_Question(models.Model):
     exam = models.ForeignKey(Exam)
@@ -348,9 +349,10 @@ class MAT_Question(models.Model):
     answer20 = models.CharField(max_length=600, default='null')
 
 
-
     def __str__(self):
         return self.question
+    def get_absolute_url(self):
+        return reverse('MATQ-detail', args=[str(self.id)])
 
 class NUM_Question(models.Model):
     exam = models.ForeignKey(Exam)
@@ -359,6 +361,8 @@ class NUM_Question(models.Model):
     answer = models.IntegerField(default=0)
     def __str__(self):
         return self.question
+    def get_absolute_url(self):
+        return reverse('NUMQ-detail', args=[str(self.id)])
 
 class SR_Question(models.Model):
     exam = models.ForeignKey(Exam)
@@ -368,6 +372,9 @@ class SR_Question(models.Model):
 
     def __str__(self):
         return self.question
+
+    def get_absolute_url(self):
+        return reverse('SRQ-detail', args=[str(self.id)])
 
 class FIB_PLUS_Question(models.Model):
     exam = models.ForeignKey(Exam)
@@ -379,6 +386,9 @@ class FIB_PLUS_Question(models.Model):
     def __str__(self):
         return self.question
 
+    def get_absolute_url(self):
+        return reverse('FIB-PLUS-Q-detail', args=[str(self.id)])
+
 class FIB_SINGLE_Question(models.Model):
     exam = models.ForeignKey(Exam)
     title = 'FIB_SINGLE'
@@ -386,3 +396,6 @@ class FIB_SINGLE_Question(models.Model):
     x = models.CharField(max_length=600, default='null')
     def __str__(self):
         return self.question
+
+    def get_absolute_url(self):
+        return reverse('FIBQ-detail', args=[str(self.id)])

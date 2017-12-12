@@ -31,7 +31,7 @@ urlpatterns = [
 
     url(r'college/school/department/course/exam/MCQ/$', views.MCQListView.as_view(), name='MCQ-list'),
     url(r'college/school/department/course/exam/MAQ/$', views.MAQListView.as_view(), name='MAQ-list'),
-    url(r'college/school/department/course/exam/TFQ/$', views.TFQDListlView.as_view(), name='TFQ-list'),
+    url(r'college/school/department/course/exam/TFQ/$', views.TFQListlView.as_view(), name='TFQ-list'),
     url(r'college/school/department/course/exam/ESSQ/$', views.ESSQListlView.as_view(), name='ESSQ-list'),
     url(r'college/school/department/course/exam/ORDQ/$', views.ORDQListlView.as_view(), name='ORDQ-list'),
     url(r'college/school/department/course/exam/MATQ/$', views.MATQListView.as_view(), name='MATQ-list'),

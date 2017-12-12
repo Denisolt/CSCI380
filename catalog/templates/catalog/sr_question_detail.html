@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="row">
+        <div class="jumbotron">
+<h1>Short Reponse Question</h1>
+
+<a href="{% url 'SR_update' sr_question.pk %}"><button type="button" class="btn btn-default">Edit Question</button></a>
+<a href="{% url 'SR_update' sr_question.pk %}"><button type="button" class="btn btn-default btn-primary">Delete Question</button></br></br>
+
+<h2>Question: {{ sr_question.question }}</h2>
+
+<h2>Answer: </h2>
+<p>{{sr_question.answer}}</p>
+        
+        </div></div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="row">
+        <div class="jumbotron">
+<h1>Single Fill in the Blank Reponse Question</h1>
+
+<a href="{% url 'FIB_update' fib_single_question.pk %}"><button type="button" class="btn btn-default">Edit Question</button></a>
+<a href="{% url 'FIB_delete' fib_single_question.pk %}"><button type="button" class="btn btn-default btn-primary">Delete Question</button></br></br>
+
+<h2>Question: {{ fib_single_question.question }}</h2>
+
+<h2>Answer: {{fib_single_question.x}}</h2>
+
+        
+        </div></div>
+{% endblock %}

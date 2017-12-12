@@ -1,0 +1,140 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="row">
+        <div class="jumbotron">
+<h1>Ordering Question</h1>
+
+
+<a href="{% url 'ORD_update' ord_question.pk %}"><button type="button" class="btn btn-default">Edit Question</button></a>
+<a href="{% url 'ORD_delete' ord_question.pk %}"><button type="button" class="btn btn-default btn-primary">Delete Question</button></br></br>
+
+
+
+<h2>Question: {{ ord_question.question }}</h2>
+
+<h2>Answers:</h2>
+    {% if ord_question.answer1 != 'null' %}
+    <li>
+      </a>{{ord_question.answer1}}
+    </li>
+    {%endif%}
+
+    {% if ord_question.answer2 != 'null' %}
+    <li>
+      </a>{{ord_question.answer2}}
+    </li>
+    {%endif%}
+
+    {% if ord_question.answer3 != 'null' %}
+    <li>
+      </a>{{ord_question.answer3}}
+    </li>
+    {%endif%}
+
+    {% if ord_question.answer4 != 'null' %}
+    <li>
+      </a>{{ord_question.answer4}}
+    </li>
+    {%endif%}
+
+    {% if ord_question.answer5 != 'null' %}
+    <li>
+      </a>{{ord_question.answer5}}
+    </li>
+    {%endif%}
+
+    {% if ord_question.answer6 != 'null' %}
+    <li>
+      </a>{{ord_question.answer6}}
+    </li>
+    {%endif%}
+
+    {% if ord_question.answer7 != 'null' %}
+    <li>
+      </a>{{ord_question.answer7}}
+    </li>
+    {%endif%}
+
+    {% if ord_question.answer8 != 'null' %}
+    <li>
+      </a>{{ord_question.answer8}}
+    </li>
+    {%endif%}
+
+    {% if ord_question.answer9 != 'null' %}
+    <li>
+      </a>{{ord_question.answer9}}
+    </li>
+    {%endif%}
+
+    {% if ord_question.answer10 != 'null' %}
+    <li>
+      </a>{{ord_question.answer10}}
+    </li>
+    {%endif%}
+
+    {% if ord_question.answer11 != 'null' %}
+    <li>
+      </a>{{ord_question.answer11}}
+    </li>
+    {%endif%}
+
+    {% if ord_question.answer12 != 'null' %}
+    <li>
+      </a>{{ord_question.answer12}}
+    </li>
+    {%endif%}
+
+    {% if ord_question.answer13 != 'null' %}
+    <li>
+      </a>{{ord_question.answer13}}
+    </li>
+    {%endif%}
+
+    {% if ord_question.answer14 != 'null' %}
+    <li>
+      </a>{{ord_question.answer14}}
+    </li>
+    {%endif%}
+
+    {% if ord_question.15 != 'null' %}
+    <li>
+      </a>{{ord_question.answer15}}
+    </li>
+    {%endif%}
+
+    {% if ord_question.answer16 != 'null' %}
+    <li>
+      </a>{{ord_question.answer16}}
+    </li>
+    {%endif%}
+
+    {% if ord_question.answer17 != 'null' %}
+    <li>
+      </a>{{ord_question.answer17}}
+    </li>
+    {%endif%}
+
+    {% if ord_question.answer18 != 'null' %}
+    <li>
+      </a>{{ord_question.answer18}}
+    </li>
+    {%endif%}
+
+    {% if ord_question.answer19 != 'null' %}
+    <li>
+      </a>{{ord_question.answer19}}
+    </li>
+    {%endif%}
+
+    {% if ord_question.answer20 != 'null' %}
+    <li>
+      </a>{{ord_question.answer20}}
+    </li>
+    {%endif%}
+ </ul>
+
+        
+        </div></div>
+{% endblock %}

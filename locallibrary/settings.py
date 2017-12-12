@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ddsbpml8ceclh4',
-        'USER': 'jsottvjzfrqspr',
-        'PASSWORD': 'bb7af5ba86cd345534eb061689ecc78bf58261b29f7c17ef02d0b07265076aa8',
-        'HOST': 'ec2-23-21-101-249.compute-1.amazonaws.com',
+        'NAME': 'd41fqmjgl96sjh',
+        'USER': 'ezjwueyhuklkjv',
+        'PASSWORD': '30f13aba46abff3487b805d97edcdf991786aeb4e48672d691dbe7fe0d2f4e51',
+        'HOST': 'ec2-174-129-253-133.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }

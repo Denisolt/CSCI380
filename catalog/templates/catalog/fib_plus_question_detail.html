@@ -1,0 +1,36 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="row">
+        <div class="jumbotron">
+<h1>Multiple Fill in the Blank Reponse Question</h1>
+
+<a href="{% url 'FIB_PLUS_update' fib_plus_question.pk %}"><button type="button" class="btn btn-default">Edit Question</button></a>
+<a href="{% url 'FIB_PLUS_delete' fib_plus_question.pk %}"><button type="button" class="btn btn-default btn-primary">Delete Question</button></br></br>
+
+<h2>Question: {{ fib_plus_question.question }}</h2>
+
+<h2>Answer: </h2>
+
+
+{% if fib_plus_question.x != 'null' %}
+    <li>
+      </a>[x] = {{fib_plus_question.x}}
+    </li>
+    {%endif%}
+
+    {% if fib_plus_question.y != 'null' %}
+    <li>
+      </a>[y] = {{fib_plus_question.y}}
+    </li>
+    {%endif%}
+
+    {% if fib_plus_question.z != 'null' %}
+    <li>
+      </a>[z] = {{fib_plus_question.z}}
+    </li>
+ {%endif%}
+
+        
+        </div></div>
+{% endblock %}

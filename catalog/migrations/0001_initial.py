@@ -30,13 +30,6 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='DeniIsHere',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=200)),
-            ],
-        ),
-        migrations.CreateModel(
             name='Department',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
@@ -226,11 +219,6 @@ class Migration(migrations.Migration):
             model_name='department',
             name='SchoolName',
             field=models.ForeignKey(help_text='Select a School for this Department', on_delete=django.db.models.deletion.CASCADE, to='catalog.School'),
-        ),
-        migrations.AddField(
-            model_name='deniishere',
-            name='exam',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='catalog.Exam'),
         ),
         migrations.AddField(
             model_name='course',
