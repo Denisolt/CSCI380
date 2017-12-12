@@ -38,7 +38,7 @@
       <a>{{ question }}</a>
     </li>
     {% endfor %}
-        <a href="/catalog/college/school/department/course/exam/MCA/create"><button type="button" class="btn btn-default btn-primary">add a question</button></a>     
+        <a href="/catalog/college/school/department/course/exam/MAQ/create"><button type="button" class="btn btn-default btn-primary">add a question</button></a>     
 
   </br>
     <h3>{{exam.tf_question_set.all|length}} True or False Questions: </h3>
@@ -100,9 +100,8 @@
     {% endfor %}
         <a href="/catalog/college/school/department/course/exam/SRQ/create"><button type="button" class="btn btn-default btn-primary">add a question</button></a>     
   </br>
-    <h3>{{exam.fib_question_set.all|length}} Multiple Fill in the Blank Questions: </h3>
-     {% for question in exam.fib_question_set.all %}
-
+    <h3>{{exam.fib_plus_question_set.all|length}} Multiple Fill in the Blank Questions: </h3>
+     {% for question in exam.fib_plus_question_set.all %}
     <li style="margin-left:45px;" >
       <a>{{ question }}</a>
     </li>
@@ -116,7 +115,7 @@
       <a>{{ question }}</a>
     </li>
     {% endfor %}
-        <a href="/catalog/college/school/department/course/exam/FIBQ/create"><button type="button" class="btn btn-default btn-primary">add a question</button></a>     
+        <a href="/catalog/college/school/department/course/exam/FIB-PLUS-Q/create"><button type="button" class="btn btn-default btn-primary">add a question</button></a>     
 
 
   </ul>

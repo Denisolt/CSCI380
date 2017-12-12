@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
-from .models import College, School, Department, Course, Exam, MC_Question, MA_Question, TF_Question, ORD_Question, ESS_Question, MAT_Question, NUM_Question, SR_Question, FIB_PLUS_Question
+from .models import College, School, Department, Course, Exam, MC_Question, MA_Question, TF_Question, ORD_Question, ESS_Question, MAT_Question, NUM_Question, SR_Question, FIB_PLUS_Question, FIB_SINGLE_Question
 from django.views import generic
 from django.contrib.auth.mixins import PermissionRequiredMixin
 
@@ -150,6 +150,9 @@ class SRQDetailView(generic.DetailView):
     model = SR_Question
 
 class FIBQDetailView(generic.DetailView):
+    model = FIB_SINGLE_Question
+
+class FIBPLUSQDetailView(generic.DetailView):
     model = FIB_PLUS_Question
 
 #--------------------------------------------------------#
@@ -179,6 +182,9 @@ class SRQListView(generic.ListView):
     model = SR_Question
 
 class FIBQListView(generic.ListView):
+    model = FIB_SINGLE_Question
+
+class FIBPLUSQListView(generic.ListView):
     model = FIB_PLUS_Question
 
 #--------------------------------------------------------#
@@ -217,7 +223,6 @@ class MAQDelete(PermissionRequiredMixin, DeleteView):
     model = MA_Question
     success_url = reverse_lazy('college')
     permission_required = 'catalog.can_mark_returned'
-    success_url = reverse_lazy('college')
 
 #--------------------------------------------------------#
 
@@ -237,7 +242,6 @@ class TFQDelete(PermissionRequiredMixin, DeleteView):
     model = TF_Question
     success_url = reverse_lazy('college')
     permission_required = 'catalog.can_mark_returned'
-    success_url = reverse_lazy('college')
 
 #--------------------------------------------------------#
 
@@ -258,7 +262,6 @@ class ESSQDelete(PermissionRequiredMixin, DeleteView):
     model = ESS_Question
     success_url = reverse_lazy('college')
     permission_required = 'catalog.can_mark_returned'
-    success_url = reverse_lazy('college')
 
 #--------------------------------------------------------#
 
@@ -279,7 +282,6 @@ class ORDQDelete(PermissionRequiredMixin, DeleteView):
     model = ORD_Question
     success_url = reverse_lazy('college')
     permission_required = 'catalog.can_mark_returned'
-    success_url = reverse_lazy('college')
 
 #--------------------------------------------------------#
 
@@ -300,7 +302,6 @@ class MATQDelete(PermissionRequiredMixin, DeleteView):
     model = MAT_Question
     success_url = reverse_lazy('college')
     permission_required = 'catalog.can_mark_returned'
-    success_url = reverse_lazy('college')
 
 #--------------------------------------------------------#
 
@@ -321,7 +322,6 @@ class NUMQDelete(PermissionRequiredMixin, DeleteView):
     model = NUM_Question
     success_url = reverse_lazy('college')
     permission_required = 'catalog.can_mark_returned'
-    success_url = reverse_lazy('college')
 
 #--------------------------------------------------------#
 
@@ -342,7 +342,6 @@ class SRQDelete(PermissionRequiredMixin, DeleteView):
     model = SR_Question
     success_url = reverse_lazy('college')
     permission_required = 'catalog.can_mark_returned'
-    success_url = reverse_lazy('college')
 
 #--------------------------------------------------------#
 
@@ -363,6 +362,25 @@ class FIBDelete(PermissionRequiredMixin, DeleteView):
     model = FIB_PLUS_Question
     success_url = reverse_lazy('college')
     permission_required = 'catalog.can_mark_returned'
+
+#--------------------------------------------------------#
+
+class FIB_PLUS_Create(PermissionRequiredMixin, CreateView):
+    model = FIB_SINGLE_Question
+    fields = '__all__'
+    initial={'name': 'Midterm'}
+    permission_required = 'catalog.can_mark_returned'
     success_url = reverse_lazy('college')
+
+class FIB_PLUS_Update(PermissionRequiredMixin, UpdateView):
+    model = FIB_SINGLE_Question
+    fields = ['name', 'ExamDate', 'InstrucorName', 'InstructorsEmail', 'semester', 'Year']
+    permission_required = 'catalog.can_mark_returned'
+    success_url = reverse_lazy('college')
+
+class FIB_PLUS_Delete(PermissionRequiredMixin, DeleteView):
+    model = FIB_SINGLE_Question
+    success_url = reverse_lazy('college')
+    permission_required = 'catalog.can_mark_returned'
 
 #--------------------------------------------------------#

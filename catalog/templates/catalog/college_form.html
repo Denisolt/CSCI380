@@ -1,5 +1,7 @@
 {% extends "base_generic.html" %}
 {% block content %}
+<div class="row">
+		<div class="jumbotron">
 
 <form action="" method="post">
     {% csrf_token %}
@@ -10,4 +12,6 @@
     <button type="submit" value="Submit" class="button btn-default">test</button>
    
 </form>
+</div>
+</div>
 {% endblock %}

@@ -36,7 +36,7 @@ class School(models.Model):
         return self.name
 
 class Department(models.Model):
-    name = models.CharField(max_length=200, help_text="Enter the Department's name (e.g. Computer Science")
+    name = models.CharField(max_length=200, help_text="Enter the Department's name (e.g. Computer Science)")
     SchoolName = models.ForeignKey(School, help_text="Select a School for this Department")
 
     def __str__(self):
@@ -50,7 +50,7 @@ class Department(models.Model):
 
 class Course(models.Model):
     CourseID = models.CharField(max_length=200, help_text="Enter the CourseID (e.g. CSCI 360)")
-    name = models.CharField(max_length=200, help_text="Enter the CourseID (e.g. Artificial Intelligence)")
+    name = models.CharField(max_length=600, help_text="Enter the CourseID (e.g. Artificial Intelligence)")
     DepartmentName = models.ForeignKey(Department)
 
     def __str__(self):
@@ -65,8 +65,8 @@ class Course(models.Model):
 class Exam(models.Model):
     name = models.CharField(max_length=200, help_text="Enter the Exam name (e.g. Midterm exam 1)")
     ExamDate = models.DateField(null=True, blank=True)
-    InstrucorName = models.CharField(max_length=200, help_text="Enter Instructors name (e.g. Sertac Artan)")
-    InstructorsEmail = models.EmailField(max_length=200, help_text="Enter Instructors email (e.g. dshakhbu@nyit.edu")
+    InstrucorName = models.CharField(max_length=600, help_text="Enter Instructors name (e.g. Sertac Artan)")
+    InstructorsEmail = models.EmailField(max_length=600, help_text="Enter Instructors email (e.g. dshakhbu@nyit.edu)")
 
     SemesterOptions = (
         ('fall', 'Fall'),
@@ -76,7 +76,7 @@ class Exam(models.Model):
     )
 
     semester= models.CharField(max_length=6, choices=SemesterOptions, blank=True, default='fall', help_text='Semester')
-    Year = models.CharField(max_length=200, help_text="Enter the Year (e.g. 2017)")
+    Year = models.CharField(max_length=600, help_text="Enter the Year (e.g. 2017)")
     Course = models.ForeignKey(Course, help_text="Select a Course for this Exam")
     
     def get_absolute_url(self):
@@ -98,64 +98,64 @@ class MC_Question(models.Model):
     )
     title = 'MC'
 
-    answer1 = models.CharField(max_length=200, default='null')
+    A = models.CharField(max_length=600, default='null')
     correctness1 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer2 = models.CharField(max_length=200, default='null')
+    B = models.CharField(max_length=600, default='null')
     correctness2 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer3 = models.CharField(max_length=200, default='null')
+    C = models.CharField(max_length=600, default='null')
     correctness3 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer4 = models.CharField(max_length=200, default='null')
+    D = models.CharField(max_length=600, default='null')
     correctness4 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer5 = models.CharField(max_length=200, default='null')
+    E = models.CharField(max_length=600, default='null')
     correctness5 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer6 = models.CharField(max_length=200, default='null')
+    F = models.CharField(max_length=600, default='null')
     correctness6 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer7 = models.CharField(max_length=200, default='null')
+    G = models.CharField(max_length=600, default='null')
     correctness7 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer8 = models.CharField(max_length=200, default='null')
+    H = models.CharField(max_length=600, default='null')
     correctness8 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer9 = models.CharField(max_length=200, default='null')
+    I = models.CharField(max_length=600, default='null')
     correctness9 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer10 = models.CharField(max_length=200, default='null')
+    J = models.CharField(max_length=600, default='null')
     correctness10 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer11 = models.CharField(max_length=200, default='null')
+    K = models.CharField(max_length=600, default='null')
     correctness11 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer12 = models.CharField(max_length=200, default='null')
+    M = models.CharField(max_length=600, default='null')
     correctness12 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer13 = models.CharField(max_length=200, default='null')
+    L = models.CharField(max_length=600, default='null')
     correctness13 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer14 = models.CharField(max_length=200, default='null')
+    N = models.CharField(max_length=600, default='null')
     correctness14 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer15 = models.CharField(max_length=200, default='null')
+    O = models.CharField(max_length=600, default='null')
     correctness15 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer16 = models.CharField(max_length=200, default='null')
+    P = models.CharField(max_length=600, default='null')
     correctness16 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer17 = models.CharField(max_length=200, default='null')
+    Q = models.CharField(max_length=600, default='null')
     correctness17 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer18 = models.CharField(max_length=200, default='null')
+    R = models.CharField(max_length=600, default='null')
     correctness18 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer19 = models.CharField(max_length=200, default='null')
+    S = models.CharField(max_length=600, default='null')
     correctness19 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer20 = models.CharField(max_length=200, default='null')
+    T = models.CharField(max_length=600, default='null')
     correctness20 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
     def __str__(self):
@@ -180,64 +180,64 @@ class MA_Question(models.Model):
     )
     title = 'MC'
 
-    answer1 = models.CharField(max_length=200, default='null')
+    A = models.CharField(max_length=600, default='null')
     correctness1 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer2 = models.CharField(max_length=200, default='null')
+    B = models.CharField(max_length=600, default='null')
     correctness2 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer3 = models.CharField(max_length=200, default='null')
+    C = models.CharField(max_length=600, default='null')
     correctness3 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer4 = models.CharField(max_length=200, default='null')
+    D = models.CharField(max_length=600, default='null')
     correctness4 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer5 = models.CharField(max_length=200, default='null')
+    E = models.CharField(max_length=600, default='null')
     correctness5 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer6 = models.CharField(max_length=200, default='null')
+    F = models.CharField(max_length=600, default='null')
     correctness6 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer7 = models.CharField(max_length=200, default='null')
+    G = models.CharField(max_length=600, default='null')
     correctness7 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer8 = models.CharField(max_length=200, default='null')
+    H = models.CharField(max_length=600, default='null')
     correctness8 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer9 = models.CharField(max_length=200, default='null')
+    I = models.CharField(max_length=600, default='null')
     correctness9 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer10 = models.CharField(max_length=200, default='null')
+    J = models.CharField(max_length=600, default='null')
     correctness10 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer11 = models.CharField(max_length=200, default='null')
+    K = models.CharField(max_length=600, default='null')
     correctness11 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer12 = models.CharField(max_length=200, default='null')
+    M = models.CharField(max_length=600, default='null')
     correctness12 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer13 = models.CharField(max_length=200, default='null')
+    L = models.CharField(max_length=600, default='null')
     correctness13 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer14 = models.CharField(max_length=200, default='null')
+    N = models.CharField(max_length=600, default='null')
     correctness14 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer15 = models.CharField(max_length=200, default='null')
+    O = models.CharField(max_length=600, default='null')
     correctness15 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer16 = models.CharField(max_length=200, default='null')
+    P = models.CharField(max_length=600, default='null')
     correctness16 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer17 = models.CharField(max_length=200, default='null')
+    Q = models.CharField(max_length=600, default='null')
     correctness17 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer18 = models.CharField(max_length=200, default='null')
+    R = models.CharField(max_length=600, default='null')
     correctness18 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer19 = models.CharField(max_length=200, default='null')
+    S = models.CharField(max_length=600, default='null')
     correctness19 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
-    answer20 = models.CharField(max_length=200, default='null')
+    T = models.CharField(max_length=600, default='null')
     correctness20 = models.CharField(max_length=9, choices=TF_Question_Option, blank=True, default='null', help_text='Correct or not corerect')
 
     def __str__(self):
@@ -266,7 +266,7 @@ class TF_Question(models.Model):
 class ESS_Question(models.Model):
     exam = models.ForeignKey(Exam)
     title = 'ESS'
-    question = models.CharField(max_length=200)
+    question = models.CharField(max_length=600)
     answer = models.TextField(default='null')
 
     def __str__(self):
@@ -275,27 +275,27 @@ class ESS_Question(models.Model):
 class ORD_Question(models.Model):
     exam = models.ForeignKey(Exam)
     title = 'ORD'
-    question = models.CharField(max_length=200)
-    answer1 = models.CharField(max_length=200, default='null')
-    answer2 = models.CharField(max_length=200, default='null')
-    answer3 = models.CharField(max_length=200, default='null')
-    answer4 = models.CharField(max_length=200, default='null')
-    answer5 = models.CharField(max_length=200, default='null')
-    answer6 = models.CharField(max_length=200, default='null')
-    answer7 = models.CharField(max_length=200, default='null')
-    answer8 = models.CharField(max_length=200, default='null')
-    answer9 = models.CharField(max_length=200, default='null')
-    answer10 = models.CharField(max_length=200, default='null')
-    answer11 = models.CharField(max_length=200, default='null')
-    answer12 = models.CharField(max_length=200, default='null')
-    answer13 = models.CharField(max_length=200, default='null')
-    answer14 = models.CharField(max_length=200, default='null')
-    answer15 = models.CharField(max_length=200, default='null')
-    answer16 = models.CharField(max_length=200, default='null')
-    answer17 = models.CharField(max_length=200, default='null')
-    answer18 = models.CharField(max_length=200, default='null')
-    answer19 = models.CharField(max_length=200, default='null')
-    answer20 = models.CharField(max_length=200, default='null')
+    question = models.CharField(max_length=600)
+    answer1 = models.CharField(max_length=600, default='null')
+    answer2 = models.CharField(max_length=600, default='null')
+    answer3 = models.CharField(max_length=600, default='null')
+    answer4 = models.CharField(max_length=600, default='null')
+    answer5 = models.CharField(max_length=600, default='null')
+    answer6 = models.CharField(max_length=600, default='null')
+    answer7 = models.CharField(max_length=600, default='null')
+    answer8 = models.CharField(max_length=600, default='null')
+    answer9 = models.CharField(max_length=600, default='null')
+    answer10 = models.CharField(max_length=600, default='null')
+    answer11 = models.CharField(max_length=600, default='null')
+    answer12 = models.CharField(max_length=600, default='null')
+    answer13 = models.CharField(max_length=600, default='null')
+    answer14 = models.CharField(max_length=600, default='null')
+    answer15 = models.CharField(max_length=600, default='null')
+    answer16 = models.CharField(max_length=600, default='null')
+    answer17 = models.CharField(max_length=600, default='null')
+    answer18 = models.CharField(max_length=600, default='null')
+    answer19 = models.CharField(max_length=600, default='null')
+    answer20 = models.CharField(max_length=600, default='null')
 
     def __str__(self):
         return self.question
@@ -303,28 +303,49 @@ class ORD_Question(models.Model):
 class MAT_Question(models.Model):
     exam = models.ForeignKey(Exam)
     title = 'MAT'
-    question = models.CharField(max_length=200)
+    question = models.CharField(max_length=600)
 
-    answer1 = models.CharField(max_length=200, default='null')
-    answer2 = models.CharField(max_length=200, default='null')
-    answer3 = models.CharField(max_length=200, default='null')
-    answer4 = models.CharField(max_length=200, default='null')
-    answer5 = models.CharField(max_length=200, default='null')
-    answer6 = models.CharField(max_length=200, default='null')
-    answer7 = models.CharField(max_length=200, default='null')
-    answer8 = models.CharField(max_length=200, default='null')
-    answer9 = models.CharField(max_length=200, default='null')
-    answer10 = models.CharField(max_length=200, default='null')
-    answer11 = models.CharField(max_length=200, default='null')
-    answer12 = models.CharField(max_length=200, default='null')
-    answer13 = models.CharField(max_length=200, default='null')
-    answer14 = models.CharField(max_length=200, default='null')
-    answer15 = models.CharField(max_length=200, default='null')
-    answer16 = models.CharField(max_length=200, default='null')
-    answer17 = models.CharField(max_length=200, default='null')
-    answer18 = models.CharField(max_length=200, default='null')
-    answer19 = models.CharField(max_length=200, default='null')
-    answer20 = models.CharField(max_length=200, default='null')
+    A = models.CharField(max_length=600, default='null')
+    B = models.CharField(max_length=600, default='null')
+    C = models.CharField(max_length=600, default='null')
+    D = models.CharField(max_length=600, default='null')
+    E = models.CharField(max_length=600, default='null')
+    F = models.CharField(max_length=600, default='null')
+    G = models.CharField(max_length=600, default='null')
+    H = models.CharField(max_length=600, default='null')
+    I = models.CharField(max_length=600, default='null')
+    J = models.CharField(max_length=600, default='null')
+    K = models.CharField(max_length=600, default='null')
+    M = models.CharField(max_length=600, default='null')
+    L = models.CharField(max_length=600, default='null')
+    N = models.CharField(max_length=600, default='null')
+    O = models.CharField(max_length=600, default='null')
+    P = models.CharField(max_length=600, default='null')
+    Q = models.CharField(max_length=600, default='null')
+    R = models.CharField(max_length=600, default='null')
+    S = models.CharField(max_length=600, default='null')
+    T = models.CharField(max_length=600, default='null')
+
+    answer1 = models.CharField(max_length=600, default='null')
+    answer2 = models.CharField(max_length=600, default='null')
+    answer3 = models.CharField(max_length=600, default='null')
+    answer4 = models.CharField(max_length=600, default='null')
+    answer5 = models.CharField(max_length=600, default='null')
+    answer6 = models.CharField(max_length=600, default='null')
+    answer7 = models.CharField(max_length=600, default='null')
+    answer8 = models.CharField(max_length=600, default='null')
+    answer9 = models.CharField(max_length=600, default='null')
+    answer10 = models.CharField(max_length=600, default='null')
+    answer11 = models.CharField(max_length=600, default='null')
+    answer12 = models.CharField(max_length=600, default='null')
+    answer13 = models.CharField(max_length=600, default='null')
+    answer14 = models.CharField(max_length=600, default='null')
+    answer15 = models.CharField(max_length=600, default='null')
+    answer16 = models.CharField(max_length=600, default='null')
+    answer17 = models.CharField(max_length=600, default='null')
+    answer18 = models.CharField(max_length=600, default='null')
+    answer19 = models.CharField(max_length=600, default='null')
+    answer20 = models.CharField(max_length=600, default='null')
 
 
 
@@ -334,7 +355,7 @@ class MAT_Question(models.Model):
 class NUM_Question(models.Model):
     exam = models.ForeignKey(Exam)
     title = 'NUM'
-    question = models.CharField(max_length=200)
+    question = models.CharField(max_length=600)
     answer = models.IntegerField(default=0)
     def __str__(self):
         return self.question
@@ -342,7 +363,7 @@ class NUM_Question(models.Model):
 class SR_Question(models.Model):
     exam = models.ForeignKey(Exam)
     title = 'SR'
-    question = models.CharField(max_length=200)
+    question = models.CharField(max_length=600)
     answer = models.TextField(default='null')
 
     def __str__(self):
@@ -351,12 +372,17 @@ class SR_Question(models.Model):
 class FIB_PLUS_Question(models.Model):
     exam = models.ForeignKey(Exam)
     title = 'FIB_PLUS'
-    question = models.CharField(max_length=200)
-    answer1 = models.CharField(max_length=200, default='null')
-    answer2 = models.CharField(max_length=200, default='null')
-    answer3 = models.CharField(max_length=200, default='null')
-    answer4 = models.CharField(max_length=200, default='null')
-    answer5 = models.CharField(max_length=200, default='null')
+    question = models.CharField(max_length=600)
+    x = models.CharField(max_length=600, default='null')
+    y = models.CharField(max_length=600, default='null')
+    z = models.CharField(max_length=600, default='null')
+    def __str__(self):
+        return self.question
 
+class FIB_SINGLE_Question(models.Model):
+    exam = models.ForeignKey(Exam)
+    title = 'FIB_SINGLE'
+    question = models.CharField(max_length=600)
+    x = models.CharField(max_length=600, default='null')
     def __str__(self):
         return self.question

@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'college/school/department/course/exam/NUMQ/(?P<pk>\d+)$', views.NUMQDetailView.as_view(), name='NUMQ-detail'),
     url(r'college/school/department/course/exam/SRQ/(?P<pk>\d+)$', views.SRQDetailView.as_view(), name='SRQ-detail'),
     url(r'college/school/department/course/exam/FIBQ/(?P<pk>\d+)$', views.FIBQDetailView.as_view(), name='FIBQ-detail'),
+    url(r'college/school/department/course/exam/FIB-PLUS-Q/(?P<pk>\d+)$', views.FIBPLUSQDetailView.as_view(), name='FIB-PLUS-Q-detail'),
 
     url(r'college/school/department/course/exam/MCQ/$', views.MCQListView.as_view(), name='MCQ-list'),
     url(r'college/school/department/course/exam/MAQ/$', views.MAQListView.as_view(), name='MAQ-list'),
@@ -37,6 +38,7 @@ urlpatterns = [
     url(r'college/school/department/course/exam/NUMQ/$', views.NUMQListlView.as_view(), name='NUMQ-list'),
     url(r'college/school/department/course/exam/SRQ/$', views.SRQListView.as_view(), name='SRQ-list'),
     url(r'college/school/department/course/exam/FIBQ/$', views.FIBQListView.as_view(), name='FIBQ-list'),
+    url(r'college/school/department/course/exam/FIB-PLUS-Q/$', views.FIBPLUSQListView.as_view(), name='FIB-PLUS-Q-list'),
 
     #Creating, deleting and updating Schools
 	url(r'^college/school/create$', views.SchoolCreate.as_view(), name='school_create'),
@@ -103,4 +105,8 @@ urlpatterns = [
     url(r'^college/school/department/course/exam/FIBQ/(?P<pk>\d+)/update/$', views.FIBUpdate.as_view(), name='FIB_update'),
     url(r'^college/school/department/course/exam/FIBQ/(?P<pk>\d+)/delete/$', views.FIBDelete.as_view(), name='FIB_delete'),
 
+    #Creating, deleting and updating FIB_PLUS Questions
+    url(r'^college/school/department/course/exam/FIB-PLUS-Q/create$', views.FIB_PLUS_Create.as_view(), name='FIB_PLUS_create'),
+    url(r'^college/school/department/course/exam/FIB-PLUS-Q/(?P<pk>\d+)/update/$', views.FIB_PLUS_Update.as_view(), name='FIB_PLUS_update'),
+    url(r'^college/school/department/course/exam/FIB-PLUS-Q/(?P<pk>\d+)/delete/$', views.FIB_PLUS_Delete.as_view(), name='FIB_PLUS_delete'),
 ]
