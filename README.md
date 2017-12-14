@@ -13,6 +13,3 @@
 
 ## Regular Meeting time: every Friday after class (3:45-4:45)
 
-## To be Completed within next week:
-   - fix up the UI
-   - 3 different versions of txt files to print
