@@ -1,0 +1,317 @@
+<body>
+{% block content %}
+{{ exam.Course.DepartmentName.SchoolName.college }} </br>
+{{ exam.Course.DepartmentName.SchoolName}} </br>
+{{ exam.Course.CourseID }} {{ exam.Course}} </br>
+{{ exam.semester }} {{ exam.Year }}</br>
+Prof. {{ exam.InstrucorName }}</br>
+{{ exam.InstructorsEmail }}</br>
+{{ exam.Course.CourseID }} </br>
+{{ exam.Course}}</br>
+{{ exam.name }}</br>
+{{ exam.ExamDate}}</br></br>
+
+   {% for question in exam.mc_question_set.all %}
+    Q1:{{ question }}</br></br>
+
+    {% if question.A != 'null' %}
+      A) {{question.A}}</br>
+    {%endif%}
+    {% if question.B != 'null' %}
+      B) {{question.B}}</br>
+    {%endif%}
+    {% if question.C != 'null' %}
+      C) {{question.C}}</br>
+    {%endif%}
+    {% if question.D != 'null' %}
+      D) {{question.D}}</br>
+    {%endif%}
+    {% if question.E != 'null' %}
+      E) {{question.E}}</br>
+    {%endif%}
+    {% if question.F != 'null' %}
+      F) {{question.F}}</br>
+    {%endif%}
+    {% if question.G != 'null' %}
+      G) {{question.G}}</br>
+    {%endif%}
+    {% if question.H != 'null' %}
+      H) {{question.H}}</br>
+    {%endif%}
+    {% if question.I != 'null' %}
+      I) {{question.I}}</br>
+    {%endif%}
+    {% if question.J != 'null' %}
+      J) {{question.J}}</br>
+    {%endif%}
+    {% if question.K != 'null' %}
+      K) {{question.K}}</br>
+    {%endif%}
+    {% if question.L != 'null' %}
+      L) {{question.L}}</br>
+    {%endif%}
+    {% if question.M != 'null' %}
+      M) {{question.M}}</br>
+    {%endif%}
+    {% if question.N != 'null' %}
+      N) {{question.N}}</br>
+    {%endif%}
+    {% if question.O != 'null' %}
+      O) {{question.O}}</br>
+    {%endif%}
+    {% if question.P != 'null' %}
+      P) {{question.P}}</br>
+    {%endif%}
+    {% if question.Q != 'null' %}
+      Q) {{question.Q}}</br>
+    {%endif%}
+    {% if question.R != 'null' %}
+      R) {{question.R}}</br>
+    {%endif%}
+    {% if question.S != 'null' %}
+      S) {{question.S}}</br>
+    {%endif%}
+    {% if question.T != 'null' %}
+      T) {{question.P}}</br>
+    {%endif%}
+</br>
+    {% endfor %}
+
+{% for question in exam.ma_question_set.all %}
+    Q2:{{ question }}</br></br>
+
+    {% if question.A != 'null' %}
+      A) {{question.A}}</br>
+    {%endif%}
+    {% if question.B != 'null' %}
+      B) {{question.B}}</br>
+    {%endif%}
+    {% if question.C != 'null' %}
+      C) {{question.C}}</br>
+    {%endif%}
+    {% if question.D != 'null' %}
+      D) {{question.D}}</br>
+    {%endif%}
+    {% if question.E != 'null' %}
+      E) {{question.E}}</br>
+    {%endif%}
+    {% if question.F != 'null' %}
+      F) {{question.F}}</br>
+    {%endif%}
+    {% if question.G != 'null' %}
+      G) {{question.G}}</br>
+    {%endif%}
+    {% if question.H != 'null' %}
+      H) {{question.H}}</br>
+    {%endif%}
+    {% if question.I != 'null' %}
+      I) {{question.I}}</br>
+    {%endif%}
+    {% if question.J != 'null' %}
+      J) {{question.J}}</br>
+    {%endif%}
+    {% if question.K != 'null' %}
+      K) {{question.K}}</br>
+    {%endif%}
+    {% if question.L != 'null' %}
+      L) {{question.L}}</br>
+    {%endif%}
+    {% if question.M != 'null' %}
+      M) {{question.M}}</br>
+    {%endif%}
+    {% if question.N != 'null' %}
+      N) {{question.N}}</br>
+    {%endif%}
+    {% if question.O != 'null' %}
+      O) {{question.O}}</br>
+    {%endif%}
+    {% if question.P != 'null' %}
+      P) {{question.P}}</br>
+    {%endif%}
+    {% if question.Q != 'null' %}
+      Q) {{question.Q}}</br>
+    {%endif%}
+    {% if question.R != 'null' %}
+      R) {{question.R}}</br>
+    {%endif%}
+    {% if question.S != 'null' %}
+      S) {{question.S}}</br>
+    {%endif%}
+    {% if question.T != 'null' %}
+      T) {{question.P}}</br>
+    {%endif%}
+</br>
+    {% endfor %}
+
+    {% for question in exam.tf_question_set.all %}
+    Q3:{{ question }}</br></br>
+	True</br>
+	False</br></br>
+    {% endfor %}
+
+    {% for question in exam.ess_question_set.all %}
+    Q4:{{ question }}</br></br>
+    {% endfor %}
+
+{% for question in exam.ord_question_set.all %}
+    Q5:{{ question }}</br></br>
+     {% if question.answer3 != 'null' %}
+      1.{{question.answer3}}</br>
+    {%endif%}
+    {% if question.answer1 != 'null' %}
+      2.{{question.answer1}}</br>
+    {%endif%}
+    {% if question.answer2 != 'null' %}
+      3.{{question.answer2}}</br>
+    {%endif%}
+    {% if question.answer7 != 'null' %}
+      4.{{question.answer7}}</br>
+    {%endif%}
+    {% if question.answer5 != 'null' %}
+      5.{{question.answer5}}</br>
+    {%endif%}
+    {% if question.answer6 != 'null' %}
+      6.{{question.answer6}}</br>
+    {%endif%}
+    {% if question.answer4 != 'null' %}
+      7.{{question.answer4}}</br>
+    {%endif%}
+    {% if question.answer8 != 'null' %}
+      8.{{question.answer8}}</br>
+    {%endif%}
+    {% if question.answer9 != 'null' %}
+      9.{{question.answer9}}</br>
+    {%endif%}
+    {% if question.answer10 != 'null' %}
+      10.{{question.answer10}}</br>
+    {%endif%}
+    {% if question.answer11 != 'null' %}
+      11.{{question.answer11}}</br>
+    {%endif%}
+    {% if question.answer12 != 'null' %}
+      12.{{question.answer12}}</br>
+    {%endif%}
+    {% if question.answer13 != 'null' %}
+      13.{{question.answer13}}</br>
+    {%endif%}
+    {% if question.answer14 != 'null' %}
+      14.{{question.answer14}}</br>
+    {%endif%}
+    {% if question.answer15 != 'null' %}
+      15.{{question.answer15}}</br>
+    {%endif%}
+    {% if question.answer16 != 'null' %}
+      16.{{question.answer16}}</br>
+    {%endif%}
+    {% if question.answer17 != 'null' %}
+      17.{{question.answer17}}</br>
+    {%endif%}
+    {% if question.answer18 != 'null' %}
+      18.{{question.answer18}}</br>
+    {%endif%}
+    {% if question.answer19 != 'null' %}
+      19.{{question.answer19}}</br>
+    {%endif%}
+    {% if question.answer20 != 'null' %}
+      20.{{question.answer20}}</br>
+    {%endif%}
+    {% endfor %}</br>
+
+
+{% for question in exam.mat_question_set.all %}
+    Q6:{{ question }}</br></br>
+
+    {% if question.A != 'null' %}
+      1. {{question.A}} 	 A.{{question.answer3}}</br>
+    {%endif%}
+    {% if question.B != 'null' %}
+      2. {{question.B}} 	 B.{{question.answer1}}</br>
+    {%endif%}
+    {% if question.C != 'null' %}
+      3. {{question.C}} 	 C.{{question.answer4}}</br>
+    {%endif%}
+    {% if question.D != 'null' %}
+      4. {{question.D}} 	 D.{{question.answer1}}</br>
+    {%endif%}
+    {% if question.E != 'null' %}
+      5. {{question.E}} 	 E.{{question.answer2}}</br>
+    {%endif%}
+    {% if question.F != 'null' %}
+      6. {{question.F}} 	 F.{{question.answer6}}</br>
+    {%endif%}
+    {% if question.G != 'null' %}
+      7. {{question.G}} 	 G.{{question.answer7}}</br>
+    {%endif%}
+    {% if question.H != 'null' %}
+      8. {{question.H}} 	 H.{{question.answer8}}</br>
+    {%endif%}
+    {% if question.I != 'null' %}
+      9. {{question.I}} 	 I.{{question.answer9}}</br>
+    {%endif%}
+    {% if question.J != 'null' %}
+      10. {{question.J}} 	 J.{{question.answer10}}</br>
+    {%endif%}
+    {% if question.K != 'null' %}
+      11. {{question.K}} 	 K.{{question.answer11}}</br>
+    {%endif%}
+    {% if question.L != 'null' %}
+      12. {{question.L}} 	 L.{{question.answer12}}</br>
+    {%endif%}
+    {% if question.M != 'null' %}
+      13. {{question.M}} 	 M.{{question.answer13}}</br>
+    {%endif%}
+    {% if question.N != 'null' %}
+      14. {{question.N}} 	 N.{{question.answer14}}</br>
+    {%endif%}
+    {% if question.O != 'null' %}
+      15. {{question.O}} 	 O.{{question.answer15}}</br>
+    {%endif%}
+    {% if question.P != 'null' %}
+      16. {{question.P}} 	 P.{{question.answer16}}</br>
+    {%endif%}
+    {% if question.Q != 'null' %}
+      17. {{question.Q}} 	 Q.{{question.answer17}}</br>
+    {%endif%}
+    {% if question.R != 'null' %}
+      18, {{question.R}} 	 R.{{question.answer18}}</br>
+    {%endif%}
+    {% if question.S != 'null' %}
+      19. {{question.S}} 	 S.{{question.answer19}}</br>
+    {%endif%}
+    {% if question.T != 'null' %}
+      20. {{question.P}} 	 T.{{question.answer20}}</br>
+    {%endif%}
+</br>
+    {% endfor %}
+
+{% for question in exam.fib_plus_question_set.all %}
+    Q7:{{ question }}</br></br>
+    {% endfor %}
+
+{% for question in exam.fib_single_question_set.all %}
+    Q8:{{ question }}</br></br>
+    {% endfor %}
+
+{% for question in exam.num_question_set.all %}
+    Q9:{{ question }}</br></br>
+    {% endfor %}
+
+{% for question in exam.sr_question_set.all %}
+    Q10{{ question }}</br></br>
+    {% endfor %}
+{% endblock %}
+<script type="text/javascript">
+	x=document.body.innerText
+	var a = window.document.createElement('a');
+	a.href = window.URL.createObjectURL(new Blob([x], {type: 'plain/text'}));
+	a.download = 'exam_question_only.txt';
+
+// Append anchor to body.
+	document.body.appendChild(a);
+	a.click();
+
+// Remove anchor from body
+document.body.removeChild(a);
+</script>
+</body>
+

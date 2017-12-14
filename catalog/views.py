@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.shortcuts import get_object_or_404
 
 # Create your views here.
 
@@ -121,6 +122,10 @@ class ExamDelete(PermissionRequiredMixin, DeleteView):
     permission_required = 'catalog.can_mark_returned'
 
 class ExamDetailView(generic.DetailView):
+    model = Exam
+
+# here it is
+class printing_exam():
     model = Exam
 
 #--------------------------------------------------------#
@@ -358,3 +363,16 @@ class FIB_PLUS_Delete(PermissionRequiredMixin, DeleteView):
     permission_required = 'catalog.can_mark_returned'
 
 #--------------------------------------------------------#
+#printing things starts here
+
+class printing_v1(generic.DetailView):
+    model = Exam
+    template_name = "catalog/exam_question_only.html"
+
+class printing_v2(generic.DetailView):
+    model = Exam
+    template_name = "catalog/sample_exam_BB.html"
+
+class printing_v3(generic.DetailView):
+    model = Exam
+    template_name = "catalog/sample_exam_qa.html"

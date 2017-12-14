@@ -29,6 +29,10 @@ urlpatterns = [
     url(r'college/school/department/course/exam/FIBQ/(?P<pk>\d+)$', views.FIBQDetailView.as_view(), name='FIBQ-detail'),
     url(r'college/school/department/course/exam/FIB-PLUS-Q/(?P<pk>\d+)$', views.FIBPLUSQDetailView.as_view(), name='FIB-PLUS-Q-detail'),
 
+    url(r'college/school/department/course/exam/(?P<pk>\d+)/printing_exam2/$', views.printing_v2.as_view(), name='sample_exam_bb'),
+    url(r'college/school/department/course/exam/(?P<pk>\d+)/printing_exam3/$', views.printing_v3.as_view(), name='sample_exam_qa'),
+    url(r'college/school/department/course/exam/(?P<pk>\d+)/printing_exam/$', views.printing_v1.as_view(), name='exam_question_only'),
+
     url(r'college/school/department/course/exam/MCQ/$', views.MCQListView.as_view(), name='MCQ-list'),
     url(r'college/school/department/course/exam/MAQ/$', views.MAQListView.as_view(), name='MAQ-list'),
     url(r'college/school/department/course/exam/TFQ/$', views.TFQListlView.as_view(), name='TFQ-list'),

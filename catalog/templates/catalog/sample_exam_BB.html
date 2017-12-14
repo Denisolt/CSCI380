@@ -1,0 +1,426 @@
+<body>
+  {% block content %}
+   {% for question in exam.mc_question_set.all %}
+
+     {% if mc_question.A != 'null' %}
+    MC {{question}}
+      {{question.A}}      {{question.correctness1}}
+
+    {%endif%}
+
+    {% if question.B != 'null' %}
+    
+      {{question.B}}      {{question.correctness2}}
+    
+    {%endif%}
+
+    {% if question.C != 'null' %}
+    
+      {{question.C}}      {{question.correctness3}}
+    
+    {%endif%}
+
+    {% if question.D != 'null' %}
+    
+      {{question.D}}      {{question.correctness4}}
+    
+    {%endif%}
+
+    {% if question.E != 'null' %}
+    
+      {{question.E}}      {{question.correctness5}}
+    
+    {%endif%}
+
+    {% if question.F != 'null' %}
+    
+      {{question.F}}      {{question.correctness6}}
+    
+    {%endif%}
+
+    {% if question.G != 'null' %}
+    
+      {{question.G}}      {{question.correctness7}}
+    
+    {%endif%}
+
+    {% if question.H != 'null' %}
+    
+      {{question.H}}      {{question.correctness8}}
+    
+    {%endif%}
+
+    {% if question.I != 'null' %}
+    
+      {{question.I}}      {{question.correctness9}}
+    
+    {%endif%}
+
+    {% if question.J != 'null' %}
+    
+      {{question.J}}      {{question.correctness10}}
+    
+    {%endif%}
+
+    {% if question.K != 'null' %}
+    
+      {{question.K}}      {{question.correctness11}}
+    
+    {%endif%}
+
+    {% if question.L != 'null' %}
+    
+      {{question.L}}      {{question.correctness12}}
+    
+    {%endif%}
+
+    {% if question.M != 'null' %}
+    
+      {{question.M}}      {{question.correctness13}}
+    
+    {%endif%}
+
+    {% if question.N != 'null' %}
+    
+      {{question.N}}      {{question.correctness14}}
+    
+    {%endif%}
+
+    {% if question.O != 'null' %}
+    
+      {{question.O}}      {{question.correctness15}}
+    
+    {%endif%}
+
+    {% if question.P != 'null' %}
+    
+      {{question.P}}      {{question.correctness16}}
+    
+    {%endif%}
+
+    {% if question.Q != 'null' %}
+    
+      {{question.Q}}      {{question.correctness17}}
+    
+    {%endif%}
+
+    {% if question.R != 'null' %}
+    
+      {{question.R}}      {{question.correctness18}}
+    
+    {%endif%}
+
+    {% if question.S != 'null' %}
+    
+      {{question.S}}      {{question.correctness19}}
+    
+    {%endif%}
+
+    {% if question.T != 'null' %}
+    
+      {{question.P}}      {{question.correctness20}}
+    
+    {%endif%}
+</br>
+    {% endfor %}
+
+{% for question in exam.ma_question_set.all %}
+  MA {{ question}}
+    {{question.A}}      {{question.correctness1}}
+    
+    {% if question.B != 'null' %}
+    
+      {{question.B}}      {{question.correctness2}}
+    
+    {%endif%}
+
+    {% if question.C != 'null' %}
+    
+      {{question.C}}      {{question.correctness3}}
+    
+    {%endif%}
+
+    {% if question.D != 'null' %}
+    
+      {{question.D}}      {{question.correctness4}}
+    
+    {%endif%}
+
+    {% if question.E != 'null' %}
+    
+      {{question.E}}      {{question.correctness5}}
+    
+    {%endif%}
+
+    {% if question.F != 'null' %}
+    
+      {{question.F}}      {{question.correctness6}}
+    
+    {%endif%}
+
+    {% if question.G != 'null' %}
+    
+      {{question.G}}      {{question.correctness7}}
+    
+    {%endif%}
+
+    {% if question.H != 'null' %}
+    
+      {{question.H}}      {{question.correctness8}}
+    
+    {%endif%}
+
+    {% if question.I != 'null' %}
+    
+      {{question.I}}      {{question.correctness9}}
+    
+    {%endif%}
+
+    {% if question.J != 'null' %}
+    
+      {{question.J}}      {{question.correctness10}}
+    
+    {%endif%}
+
+    {% if question.K != 'null' %}
+    
+      {{question.K}}      {{question.correctness11}}
+    
+    {%endif%}
+
+    {% if question.L != 'null' %}
+    
+      {{question.L}}      {{question.correctness12}}
+    
+    {%endif%}
+
+    {% if question.M != 'null' %}
+    
+      {{question.M}}      {{question.correctness13}}
+    
+    {%endif%}
+
+    {% if question.N != 'null' %}
+    
+      {{question.N}}      {{question.correctness14}}
+    
+    {%endif%}
+
+    {% if question.O != 'null' %}
+    
+      {{question.O}}      {{question.correctness15}}
+    
+    {%endif%}
+
+    {% if question.P != 'null' %}
+    
+      {{question.P}}      {{question.correctness16}}
+    
+    {%endif%}
+
+    {% if question.Q != 'null' %}
+    
+      {{question.Q}}      {{question.correctness17}}
+    
+    {%endif%}
+
+    {% if question.R != 'null' %}
+    
+      {{question.R}}      {{question.correctness18}}
+    
+    {%endif%}
+
+    {% if question.S != 'null' %}
+    
+      {{question.S}}      {{question.correctness19}}
+    
+    {%endif%}
+
+    {% if question.T != 'null' %}
+    
+      {{question.P}}      {{question.correctness20}}
+    
+    {%endif%}
+    
+</br>
+    {% endfor %}
+
+    {% for question in exam.tf_question_set.all %}
+    TF {{ question }}     {{question.answers}}
+    {% endfor %} </br>
+
+    {% for question in exam.ess_question_set.all %}
+    ESS {{ question }}  Here's a sample answer
+    {% endfor %}</br>
+
+    {% for question in exam.ord_question_set.all %}
+    ORD {{ question }}          
+     {% if question.answer1 != 'null' %}
+      {{question.answer1}}     
+    {%endif%}
+    {% if question.answer2 != 'null' %}
+      {{question.answer2}}     
+    {%endif%}
+    {% if question.answer3 != 'null' %}
+      {{question.answer3}}     
+    {%endif%}
+    {% if question.answer4 != 'null' %}
+      {{question.answer4}}     
+    {%endif%}
+    {% if question.answer5 != 'null' %}
+      {{question.answer5}}     
+    {%endif%}
+    {% if question.answer6 != 'null' %}
+      {{question.answer6}}     
+    {%endif%}
+    {% if question.answer7 != 'null' %}
+      {{question.answer7}}     
+    {%endif%}
+    {% if question.answer8 != 'null' %}
+      {{question.answer8}}     
+    {%endif%}
+    {% if question.answer9 != 'null' %}
+      {{question.answer9}}     
+    {%endif%}
+    {% if question.answer10 != 'null' %}
+      {{question.answer10}}     
+    {%endif%}
+    {% if question.answer11 != 'null' %}
+      {{question.answer11}}     
+    {%endif%}
+    {% if question.answer12 != 'null' %}
+      {{question.answer12}}     
+    {%endif%}
+    {% if question.answer13 != 'null' %}
+      {{question.answer13}}     
+    {%endif%}
+    {% if question.answer14 != 'null' %}
+      {{question.answer14}}     
+    {%endif%}
+    {% if question.answer15 != 'null' %}
+      {{question.answer15}}     
+    {%endif%}
+    {% if question.answer16 != 'null' %}
+      {{question.answer16}}     
+    {%endif%}
+    {% if question.answer17 != 'null' %}
+      {{question.answer17}}     
+    {%endif%}
+    {% if question.answer18 != 'null' %}
+      {{question.answer18}}     
+    {%endif%}
+    {% if question.answer19 != 'null' %}
+      {{question.answer19}}     
+    {%endif%}
+    {% if question.answer20 != 'null' %}
+       {{question.answer20}}     
+    {%endif%}
+    {% endfor %}</br>
+
+
+{% for question in exam.mat_question_set.all %}
+    MAT {{ question }}          
+
+    {% if question.A != 'null' %}
+       {{question.A}}    {{question.answer1}}     
+    {%endif%}
+    {% if question.B != 'null' %}
+       {{question.B}}    {{question.answer2}}     
+    {%endif%}
+    {% if question.C != 'null' %}
+       {{question.C}}    {{question.answer3}}     
+    {%endif%}
+    {% if question.D != 'null' %}
+       {{question.D}}    {{question.answer4}}     
+    {%endif%}
+    {% if question.E != 'null' %}
+       {{question.E}}    {{question.answer5}}     
+    {%endif%}
+    {% if question.F != 'null' %}
+       {{question.F}}    {{question.answer6}}     
+    {%endif%}
+    {% if question.G != 'null' %}
+       {{question.G}}    {{question.answer7}}     
+    {%endif%}
+    {% if question.H != 'null' %}
+       {{question.H}}    {{question.answer8}}     
+    {%endif%}
+    {% if question.I != 'null' %}
+       {{question.I}}    {{question.answer9}}     
+    {%endif%}
+    {% if question.J != 'null' %}
+       {{question.J}}   {{question.answer10}}     
+    {%endif%}
+    {% if question.K != 'null' %}
+       {{question.K}}   {{question.answer11}}     
+    {%endif%}
+    {% if question.L != 'null' %}
+       {{question.L}}   {{question.answer12}}     
+    {%endif%}
+    {% if question.M != 'null' %}
+       {{question.M}}   {{question.answer13}}     
+    {%endif%}
+    {% if question.N != 'null' %}
+       {{question.N}}   {{question.answer14}}     
+    {%endif%}
+    {% if question.O != 'null' %}
+       {{question.O}}   {{question.answer15}}     
+    {%endif%}
+    {% if question.P != 'null' %}
+       {{question.P}}   {{question.answer16}}     
+    {%endif%}
+    {% if question.Q != 'null' %}
+       {{question.Q}}   {{question.answer17}}     
+    {%endif%}
+    {% if question.R != 'null' %}
+       {{question.R}}   {{question.answer18}}     
+    {%endif%}
+    {% if question.S != 'null' %}
+       {{question.S}}   {{question.answer19}}     
+    {%endif%}
+    {% if question.T != 'null' %}
+       {{question.P}}   {{question.answer20}}     
+    {%endif%}
+</br>
+    {% endfor %}
+
+{% for question in exam.fib_plus_question_set.all %}
+    {% if question.x != 'null' %}
+    FIB_PLUS {{ question }}    x     {{question.x}}     
+    {%endif%}
+    {% if question.y != 'null' %}
+      y    {{question.y}}    
+    {%endif%}
+    {% if question.z != 'null' %}
+      z    {{question.z}} 
+        {%endif%}
+</br>
+    {% endfor %}
+
+{% for question in exam.fib_single_question_set.all %}
+    FIL {{ question }}    x     {{question.x}} </br>
+    {% endfor %}
+
+{% for question in exam.num_question_set.all %}
+    NUM {{ question }}    {{ question.answer}}</br>
+    {% endfor %}
+
+{% for question in exam.sr_question_set.all %}
+    SR {{ question }}    {{ question.answer}}</br>
+    {% endfor %}
+{% endblock %}
+<script type="text/javascript">
+	x=document.body.innerText
+	var a = window.document.createElement('a');
+	a.href = window.URL.createObjectURL(new Blob([x], {type: 'plain/text'}));
+	a.download = 'sample_exam_BB.txt';
+
+// Append anchor to body.
+	document.body.appendChild(a);
+	a.click();
+
+// Remove anchor from body
+document.body.removeChild(a);
+</script>
+</body>
+

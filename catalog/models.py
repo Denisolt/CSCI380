@@ -275,6 +275,7 @@ class ORD_Question(models.Model):
     exam = models.ForeignKey(Exam)
     title = 'ORD'
     question = models.CharField(max_length=600)
+    correct = models.CharField(max_length=600, help_text='enter the correct order')
     answer1 = models.CharField(max_length=600, default='null')
     answer2 = models.CharField(max_length=600, default='null')
     answer3 = models.CharField(max_length=600, default='null')
@@ -305,7 +306,7 @@ class MAT_Question(models.Model):
     exam = models.ForeignKey(Exam)
     title = 'MAT'
     question = models.CharField(max_length=600)
-
+    correct = models.CharField(max_length=600, help_text='enter the correct match, in format number-letter, etc')
     A = models.CharField(max_length=600, default='null')
     B = models.CharField(max_length=600, default='null')
     C = models.CharField(max_length=600, default='null')

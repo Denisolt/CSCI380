@@ -6,11 +6,17 @@
         
     <div class="jumbotron">
     <h2>{{ exam.name }} - Exam</h2>
+    <b>{{ exam.Course.DepartmentName.SchoolName.college }}</b> </br>
     <b>Date:</b> {{ exam.ExamDate }} </br>
     <b>Instructor:</b> {{ exam.InstrucorName }} / {{ exam.InstructorsEmail }} </br>
     <b>Semester:</b> {{ exam.semester }} {{ exam.Year }} </br>
     <b>Course:</b> {{ exam.Course }} 
     <br /><br />
+    <h4>Download the Exam:</h4>
+    <a href="{% url 'sample_exam_qa' exam.pk %}"><button type="button" class="btn btn-default">Questions and answers</button></a>
+    <a href="{% url 'exam_question_only' exam.pk %}"><button type="button" class="btn btn-default">Questions only</button></a>
+    <a href="{% url 'sample_exam_bb' exam.pk %}"><button type="button" class="btn btn-default">BlackBoard version</button></a> </br>
+
     <a href="{% url 'exam_update' exam.pk %}"><button type="button" class="btn btn-default">Edit Exam</button></a>
     <a href="{% url 'exam_delete' exam.pk %}"><button type="button" class="btn btn-default btn-primary">Delete Exam</button></a>
         <br />
