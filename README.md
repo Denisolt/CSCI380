@@ -6,10 +6,11 @@ To design an application for professors of different colleges to generate exams 
 The main purpose of this project was to design and develop a system for professors of different colleges that generates different types of question for examination. The system will prompt the user to login using his credentials or create a new account, it also allows user to pick the college and its department or add a new college and its department, following which the user will have an option of either selecting an already entered course or adding a new course. The selected course will feature already entered exams and an option to create a new examination. This project was called the Examinator by the software engineering team, since it performs all the needed tasks of the professor and is built to improve and create an easier workflow of creating exams. 
 ## How to run the application:
 In order to run the application from your own device, you need to ensure you have following installed:
-- Git
-- Python 3.5
-- pip
-- Virtual environments </br>
+  - Git
+  - Python 3.5
+  - pip
+  - Virtual environments </br>
+
 Open the terminal and type: </br>
 `git clone https://github.com/Denisolt/CSCI-380.git` </br>
 `cd CSCI-380-master` </br>
